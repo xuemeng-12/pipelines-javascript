@@ -21,8 +21,7 @@ steps:
 resources:
   pipelines:
   - pipeline: testTrigger  # Name of the pipeline resource
-    source:  # Name of the triggering pipeline
+    source: pipelines-javascript.git # Name of the triggering pipeline
     trigger: 
       branches:
-      - releases/*
       - master
