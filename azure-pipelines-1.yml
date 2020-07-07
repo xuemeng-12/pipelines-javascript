@@ -18,10 +18,18 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 # this is being defined in app-ci pipeline
+#resources:
+#  pipelines:
+#  - pipeline: TestTrigger    # Name of the pipeline resource
+#    source: pipelines-javascript.git # Name of the triggering pipeline
+#    trigger: 
+#      branches:
+#      - master
+
 resources:
   pipelines:
-  - pipeline: TestTrigger  # Name of the pipeline resource
-    source: pipelines-javascript.git # Name of the triggering pipeline
-    trigger: 
+  - pipeline: Smart
+    source: pipelines-javascriptB
+    trigger:
       branches:
       - master
