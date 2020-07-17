@@ -26,10 +26,18 @@ steps:
 #      branches:
 #      - master
 
-resources:
-  pipelines:
-  - pipeline: Smart
-    source: pipelines-javascriptB
-    trigger:
-      branches:
-      - master
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
+      git branch topic
+
+# resources:
+#   pipelines:
+#   - pipeline: Smart
+#     source: pipelines-javascriptB
+#     trigger:
+#       branches:
+#       - master
